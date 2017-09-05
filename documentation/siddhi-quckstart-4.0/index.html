@@ -5,20 +5,13 @@
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
-      
-        <meta name="description" content="Stream Processing and Complex Event Processing Engine">
       
       
-        <link rel="canonical" href="https://wso2.github.io/siddhi/documentation/siddhi-quckstart-4.0/">
       
       
-        <meta name="author" content="WSO2">
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
       
-      
-        <link rel="shortcut icon" href="../../images/favicon.ico">
-      
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.10.3">
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.6.1">
     
     
       
@@ -26,12 +19,12 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr-e826f8942a.js"></script>
+      <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application-9011e2d3f8.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application-4d0d3f2fbf.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-23f75ab9c7.palette.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-f78e5cb881.palette.css">
       
     
     
@@ -59,8 +52,6 @@
       <defs>
         
         
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
-        
       </defs>
     </svg>
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
@@ -71,13 +62,11 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://wso2.github.io/siddhi" title="WSO2 Siddhi" class="md-header-nav__button md-logo">
-          
-            
-              <img src="../../images/siddhi-logo-w.svg" width="24" height="24">
-            
-          
-        </a>
+        
+          <a href="../.." title="WSO2 Siddhi" class="md-logo md-header-nav__button">
+            <img src="../../images/siddhi-logo-w.svg" width="24" height="24">
+          </a>
+        
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
@@ -86,6 +75,10 @@
         <span class="md-flex__ellipsis md-header-nav__title">
           
             
+              
+                <span class="md-header-nav__parent">
+                  Documentation
+                </span>
               
             
             Quick Start Guide
@@ -96,17 +89,17 @@
         
           <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
-<div class="md-search" data-md-component="search" role="dialog">
+<div class="md-search" data-md-component="search">
   <label class="md-search__overlay" for="search"></label>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
       <label class="md-icon md-search__icon" for="search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+        <div class="md-search-result" data-md-component="result">
           <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
             Type to start searching
           </div>
@@ -118,37 +111,16 @@
 </div>
         
       </div>
-      
-        <div class="md-flex__cell md-flex__cell--shrink">
-          <div class="md-header-nav__source">
-            
-
-
-  
-
-
-  <a href="https://github.com/wso2/siddhi" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      WSO2 Siddhi
-    </div>
-  </a>
-
-          </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
         </div>
-      
+      </div>
     </div>
   </nav>
 </header>
     
     <div class="md-container">
-      
       
       
       <main class="md-main">
@@ -160,37 +132,13 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    <div class="md-nav__button md-logo">
-      
-        
-          <img src="../../images/siddhi-logo-w.svg">
-        
-      
-    </div>
+    
+      <i class="md-logo md-nav__button">
+        <img src="../../images/siddhi-logo-w.svg">
+      </i>
+    
     WSO2 Siddhi
   </label>
-  
-    <div class="md-nav__source">
-      
-
-
-  
-
-
-  <a href="https://github.com/wso2/siddhi" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      WSO2 Siddhi
-    </div>
-  </a>
-
-    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -210,17 +158,26 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../features/" title="Features" class="md-nav__link">
-      Features
-    </a>
-  </li>
 
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      
-      
-      
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Documentation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
 
   
 
@@ -228,8 +185,6 @@
   <li class="md-nav__item md-nav__item--active">
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
@@ -244,51 +199,68 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
   
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-stream-processing-and-complex-event-processing-cep-overview" title="1. Stream Processing and Complex Event Processing (CEP) Overview" class="md-nav__link">
-    1. Stream Processing and Complex Event Processing (CEP) Overview
+  <a href="#siddhi-quick-start-guide" title="Siddhi Quick Start Guide" class="md-nav__link">
+    Siddhi Quick Start Guide
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-siddhi-applications-via-wso2-sp" title="Creating Siddhi Applications via WSO2 SP" class="md-nav__link">
+    Creating Siddhi Applications via WSO2 SP
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#2-overview-of-siddhi" title="2. Overview of Siddhi" class="md-nav__link">
-    2. Overview of Siddhi
+        
+          <li class="md-nav__item">
+  <a href="#using-siddhi-as-an-external-library" title="Using Siddhi as an External Library" class="md-nav__link">
+    Using Siddhi as an External Library
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-creating-a-java-project" title="Step 1: Creating a Java Project" class="md-nav__link">
+    Step 1: Creating a Java Project
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#3-using-siddhi-for-the-first-time" title="3. Using Siddhi for the First Time" class="md-nav__link">
-    3. Using Siddhi for the First Time
+        
+          <li class="md-nav__item">
+  <a href="#step-2-creating-siddhi-application-runtime" title="Step 2: Creating Siddhi Application Runtime" class="md-nav__link">
+    Step 2: Creating Siddhi Application Runtime
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#4-siddhi-hello-world-your-first-siddhi-application" title="4. Siddhi ‘Hello World!’ — Your First Siddhi Application" class="md-nav__link">
-    4. Siddhi ‘Hello World!’ — Your First Siddhi Application
+        
+          <li class="md-nav__item">
+  <a href="#step-3-registering-a-callback" title="Step 3: Registering a Callback" class="md-nav__link">
+    Step 3: Registering a Callback
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#5-simulating-events" title="5. Simulating Events" class="md-nav__link">
-    5. Simulating Events
+        
+          <li class="md-nav__item">
+  <a href="#step-4-sending-events" title="Step 4: Sending Events" class="md-nav__link">
+    Step 4: Sending Events
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#6-a-bit-of-stream-processing-temporal-event-processing" title="6. A Bit of Stream Processing - temporal event processing" class="md-nav__link">
-    6. A Bit of Stream Processing - temporal event processing
-  </a>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -300,37 +272,6 @@
     
   </li>
 
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
-    
-    <label class="md-nav__link" for="nav-4">
-      Documentation
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
-        Documentation
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../user-guide/" title="User Guide" class="md-nav__link">
-      User Guide
-    </a>
-  </li>
-
         
           
           
@@ -340,18 +281,6 @@
   <li class="md-nav__item">
     <a href="../siddhi-4.0/" title="Siddhi Query Guide" class="md-nav__link">
       Siddhi Query Guide
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../siddhi-architecture/" title="Siddhi Architecture" class="md-nav__link">
-      Siddhi Architecture
     </a>
   </li>
 
@@ -380,13 +309,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
-    <label class="md-nav__link" for="nav-6">
+    <label class="md-nav__link" for="nav-4">
       API Docs
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+      <label class="md-nav__title" for="nav-4">
         API Docs
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -398,8 +327,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../api/4.1.2/" title="4.1.2" class="md-nav__link">
-      4.1.2
+    <a href="../../api/4.0.0-M35/" title="4.0.0-M35" class="md-nav__link">
+      4.0.0-M35
     </a>
   </li>
 
@@ -410,8 +339,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../api/4.1.1/" title="4.1.1" class="md-nav__link">
-      4.1.1
+    <a href="../../api/4.0.0-M36/" title="4.0.0-M36" class="md-nav__link">
+      4.0.0-M36
     </a>
   </li>
 
@@ -422,8 +351,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../api/4.1.0/" title="4.1.0" class="md-nav__link">
-      4.1.0
+    <a href="../../api/4.0.0-M37/" title="4.0.0-M37" class="md-nav__link">
+      4.0.0-M37
     </a>
   </li>
 
@@ -434,8 +363,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../api/4.0.9/" title="4.0.9" class="md-nav__link">
-      4.0.9
+    <a href="../../api/4.0.0-M38/" title="4.0.0-M38" class="md-nav__link">
+      4.0.0-M38
     </a>
   </li>
 
@@ -446,8 +375,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../api/4.0.8/" title="4.0.8" class="md-nav__link">
-      4.0.8
+    <a href="../../api/4.0.0-M39/" title="4.0.0-M39" class="md-nav__link">
+      4.0.0-M39
     </a>
   </li>
 
@@ -458,8 +387,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../api/4.0.7/" title="4.0.7" class="md-nav__link">
-      4.0.7
+    <a href="../../api/4.0.0-M40/" title="4.0.0-M40" class="md-nav__link">
+      4.0.0-M40
     </a>
   </li>
 
@@ -470,8 +399,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../api/4.0.6/" title="4.0.6" class="md-nav__link">
-      4.0.6
+    <a href="../../api/4.0.0-M41/" title="4.0.0-M41" class="md-nav__link">
+      4.0.0-M41
     </a>
   </li>
 
@@ -482,8 +411,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../api/4.0.5/" title="4.0.5" class="md-nav__link">
-      4.0.5
+    <a href="../../api/4.0.0-M42/" title="4.0.0-M42" class="md-nav__link">
+      4.0.0-M42
     </a>
   </li>
 
@@ -494,8 +423,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../api/4.0.4/" title="4.0.4" class="md-nav__link">
-      4.0.4
+    <a href="../../api/4.0.0-M43/" title="4.0.0-M43" class="md-nav__link">
+      4.0.0-M43
     </a>
   </li>
 
@@ -506,8 +435,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../api/4.0.3/" title="4.0.3" class="md-nav__link">
-      4.0.3
+    <a href="../../api/4.0.0-M44/" title="4.0.0-M44" class="md-nav__link">
+      4.0.0-M44
     </a>
   </li>
 
@@ -518,8 +447,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../api/4.0.2/" title="4.0.2" class="md-nav__link">
-      4.0.2
+    <a href="../../api/4.0.0-M45/" title="4.0.0-M45" class="md-nav__link">
+      4.0.0-M45
     </a>
   </li>
 
@@ -530,8 +459,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../api/4.0.1/" title="4.0.1" class="md-nav__link">
-      4.0.1
+    <a href="../../api/4.0.0-M46/" title="4.0.0-M46" class="md-nav__link">
+      4.0.0-M46
     </a>
   </li>
 
@@ -542,8 +471,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../api/4.0.0/" title="4.0.0" class="md-nav__link">
-      4.0.0
+    <a href="../../api/4.0.0-M47/" title="4.0.0-M47" class="md-nav__link">
+      4.0.0-M47
     </a>
   </li>
 
@@ -554,8 +483,140 @@
 
 
   <li class="md-nav__item">
-    <a href="../../api/latest/" title="latest" class="md-nav__link">
-      latest
+    <a href="../../api/4.0.0-M48/" title="4.0.0-M48" class="md-nav__link">
+      4.0.0-M48
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/4.0.0-M49/" title="4.0.0-M49" class="md-nav__link">
+      4.0.0-M49
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/4.0.0-M50/" title="4.0.0-M50" class="md-nav__link">
+      4.0.0-M50
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/4.0.0-M51/" title="4.0.0-M51" class="md-nav__link">
+      4.0.0-M51
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/4.0.0-M52/" title="4.0.0-M52" class="md-nav__link">
+      4.0.0-M52
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/4.0.0-M53-SNAPSHOT/" title="4.0.0-M53-SNAPSHOT" class="md-nav__link">
+      4.0.0-M53-SNAPSHOT
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/4.0.0-M53/" title="4.0.0-M53" class="md-nav__link">
+      4.0.0-M53
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/4.0.0-M54/" title="4.0.0-M54" class="md-nav__link">
+      4.0.0-M54
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/4.0.0-M55/" title="4.0.0-M55" class="md-nav__link">
+      4.0.0-M55
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/4.0.0-M56/" title="4.0.0-M56" class="md-nav__link">
+      4.0.0-M56
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/4.0.0-M57/" title="4.0.0-M57" class="md-nav__link">
+      4.0.0-M57
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/4.0.0-M58-SNAPSHOT/" title="4.0.0-M58-SNAPSHOT" class="md-nav__link">
+      4.0.0-M58-SNAPSHOT
     </a>
   </li>
 
@@ -591,51 +652,68 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
   
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-stream-processing-and-complex-event-processing-cep-overview" title="1. Stream Processing and Complex Event Processing (CEP) Overview" class="md-nav__link">
-    1. Stream Processing and Complex Event Processing (CEP) Overview
+  <a href="#siddhi-quick-start-guide" title="Siddhi Quick Start Guide" class="md-nav__link">
+    Siddhi Quick Start Guide
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-siddhi-applications-via-wso2-sp" title="Creating Siddhi Applications via WSO2 SP" class="md-nav__link">
+    Creating Siddhi Applications via WSO2 SP
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#2-overview-of-siddhi" title="2. Overview of Siddhi" class="md-nav__link">
-    2. Overview of Siddhi
+        
+          <li class="md-nav__item">
+  <a href="#using-siddhi-as-an-external-library" title="Using Siddhi as an External Library" class="md-nav__link">
+    Using Siddhi as an External Library
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-creating-a-java-project" title="Step 1: Creating a Java Project" class="md-nav__link">
+    Step 1: Creating a Java Project
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#3-using-siddhi-for-the-first-time" title="3. Using Siddhi for the First Time" class="md-nav__link">
-    3. Using Siddhi for the First Time
+        
+          <li class="md-nav__item">
+  <a href="#step-2-creating-siddhi-application-runtime" title="Step 2: Creating Siddhi Application Runtime" class="md-nav__link">
+    Step 2: Creating Siddhi Application Runtime
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#4-siddhi-hello-world-your-first-siddhi-application" title="4. Siddhi ‘Hello World!’ — Your First Siddhi Application" class="md-nav__link">
-    4. Siddhi ‘Hello World!’ — Your First Siddhi Application
+        
+          <li class="md-nav__item">
+  <a href="#step-3-registering-a-callback" title="Step 3: Registering a Callback" class="md-nav__link">
+    Step 3: Registering a Callback
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#5-simulating-events" title="5. Simulating Events" class="md-nav__link">
-    5. Simulating Events
+        
+          <li class="md-nav__item">
+  <a href="#step-4-sending-events" title="Step 4: Sending Events" class="md-nav__link">
+    Step 4: Sending Events
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#6-a-bit-of-stream-processing-temporal-event-processing" title="6. A Bit of Stream Processing - temporal event processing" class="md-nav__link">
-    6. A Bit of Stream Processing - temporal event processing
-  </a>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -654,205 +732,114 @@
               
                 
                 
-                <h1 id="quick-start-guide-to-siddhi">Quick Start Guide to Siddhi<a class="headerlink" href="#quick-start-guide-to-siddhi" title="Permanent link">&para;</a></h1>
-<p><a href="https://github.com/wso2/siddhi">Siddhi</a> is a 100% open source Java library that is thoroughly optimized for high performance. 
-It performs <strong><em>Stream Processing</em></strong> and <strong><em>Complex Event Processing</em></strong> on real time data streams. </p>
-<p>Siddhi is used by many companies including Uber and eBay (via Apache Eagle). <strong>Uber processes more than 20 billion 
-events per day using Siddhi</strong> for fraud analytics, and Siddhi is used in Apache Eagle as a policy enforcement engine.</p>
-<p>This quick start guide contains the following six sections:</p>
-<ol>
-<li>Stream Processing and Complex Event Processing Overview - about the <strong>domain</strong> of Siddhi</li>
-<li>An Overview of Siddhi - Explaining the basic <strong>architecture</strong></li>
-<li>Using Siddhi for the First Time - how to <strong>set up</strong> the software</li>
-<li>Siddhi ‘Hello World!’ - Your <strong>First Siddhi Application</strong></li>
-<li>Simulating Events - <strong>Testing</strong> your query with simulated events</li>
-<li>A Bit of Stream Processing - <strong>temporal event processing</strong></li>
-</ol>
-<h2 id="1-stream-processing-and-complex-event-processing-cep-overview">1. Stream Processing and Complex Event Processing (CEP) Overview<a class="headerlink" href="#1-stream-processing-and-complex-event-processing-cep-overview" title="Permanent link">&para;</a></h2>
-<p>Before diving into using Siddhi, let's first discuss Stream Processing 
-and Complex Event Processing in brief so that we can identify the use-cases where Siddhi can be used.</p>
-<p>First let's understand what an event is through an example. <strong>If we consider the transactions carried out via an ATM as a data 
-stream, one withdrawal from it can be considered an event</strong>. This event contains data about the amount, time, account number etc. 
-Many such transactions form a stream.</p>
-<p><img alt="" src="../../images/quickstart/event-stream.png?raw=true" title="Event Stream" /></p>
-<p><a href="https://reprints.forrester.com/#/assets/2/202/'RES136545'/reports">Forrester</a> defines Streaming Analytics as:</p>
-<blockquote>
-<p>Software that provides analytical operators to <strong>orchestrate data flow</strong>, <strong>calculate analytics</strong>, and <strong>detect patterns</strong> on 
-event data <strong>from multiple, disparate live data sources</strong> to allow developers to build applications that <strong>sense, think, 
-and act in real time</strong>.</p>
-</blockquote>
-<p><a href="https://www.gartner.com/it-glossary/complex-event-processing">Gartner’s IT Glossary</a> defines CEP as follows:</p>
-<blockquote>
-<p>"CEP is a kind of computing in which <strong>incoming data about events is distilled into more useful, higher level “complex” 
-event data</strong> that provides insight into what is happening."</p>
-<p>"<strong>CEP is event-driven</strong> because the computation is triggered by the receipt of event data. CEP is used for highly 
-demanding, continuous-intelligence applications that enhance situation awareness and support real-time decisions."</p>
-</blockquote>
-<p><img alt="" src="../../images/quickstart/siddhi-basic.png?raw=true" title="Siddhi Basic Representation" /></p>
-<p>Basically, Siddhi receives data event-by-event and processes them in real time to produce meaningful information.</p>
-<p>Siddhi Can be used in the following use-cases:</p>
+                  <h1>Quick Start Guide</h1>
+                
+                <h2 id="siddhi-quick-start-guide">Siddhi Quick Start Guide</h2>
+<p>Siddhi Query Language (SiddhiQL) is designed to process event streams to identify complex event occurrences.</p>
+<p>The Siddhi Query Language can be used as a library by embedding it in a Java project, or you can use it with WSO2 Stream Processor which allows you to write a Siddhi Application using the WSO2 SP Editor and then deploy that application to the WSO2 SP server.</p>
+<h3 id="creating-siddhi-applications-via-wso2-sp">Creating Siddhi Applications via WSO2 SP</h3>
+<p>For instructions to write and deploy a Siddhi application in WSO2 SP, see the <a href="https://docs.wso2.com/display/SP400/Quick+Start+Guide">WSO2 SP Quick Start Guide</a>.</p>
+<h3 id="using-siddhi-as-an-external-library">Using Siddhi as an External Library</h3>
+<p>To use Siddhi as a library by embedding it in a Java project, follow the steps below:</p>
+<h4 id="step-1-creating-a-java-project">Step 1: Creating a Java Project</h4>
 <ul>
-<li>Fraud Analytics </li>
-<li>Monitoring </li>
-<li>Anomaly Detection</li>
-<li>Sentiment Analysis</li>
-<li>Processing Customer Behaviour</li>
-<li>.. etc</li>
+<li>Create a Java project using Maven and include the following dependencies in its <code>pom.xml</code> file.</li>
 </ul>
-<h2 id="2-overview-of-siddhi">2. Overview of Siddhi<a class="headerlink" href="#2-overview-of-siddhi" title="Permanent link">&para;</a></h2>
-<p><img alt="" src="../../images/siddhi-overview.png?raw=true" title="Overview" /></p>
-<p>As indicated above, Siddhi can:</p>
-<ul>
-<li>accept event inputs from many different types of sources</li>
-<li>process them to generate insights</li>
-<li>publish them to many types of sinks.</li>
-</ul>
-<p>To use Siddhi, you need to write the processing logic as a <strong>Siddhi Application</strong> in the <strong>Siddhi Streaming SQL</strong> 
-language which is discussed in the 4th section. After writing and starting <strong>a Siddhi application</strong>, it:</p>
-<ol>
-<li>Takes data one-by-one as events</li>
-<li>Processes the data in each event</li>
-<li>Generates new high level events based on the processing done so far</li>
-<li>Sends newly generated events as the output to streams.</li>
-</ol>
-<h2 id="3-using-siddhi-for-the-first-time">3. Using Siddhi for the First Time<a class="headerlink" href="#3-using-siddhi-for-the-first-time" title="Permanent link">&para;</a></h2>
-<p>In this section, we will be using the WSO2 Stream Processor(referred to as SP in the rest of this guide) — a server version of Siddhi that has a
-sophisticated editor with a GUI (referred to as <em><strong>“Stream Processor Studio”</strong></em>) where you can write your query and simulate events
-as a data stream.</p>
-<p><strong>Step 1</strong> — Install 
-<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Oracle Java SE Development Kit (JDK)</a> version 1.8. <br>
-<strong>Step 2</strong> — <a href="https://docs.oracle.com/cd/E19182-01/820-7851/inst_cli_jdk_javahome_t/">Set the JAVA_HOME</a> environment 
-variable. <br>
-<strong>Step 3</strong> — Download the latest <a href="http://wso2.com/analytics?utm_source=gitanalytics&amp;utm_campaign=gitanalytics_Jul17">WSO2 Stream Processor</a>. <br>
-<strong>Step 4</strong> — Extract the downloaded zip and navigate to <code>&lt;SP_HOME&gt;/bin</code>. <br> (<code>SP_HOME</code> refers to the extracted folder) <br>
-<strong>Step 5</strong> — Issue the following command in the command prompt (Windows) / terminal (Linux) </p>
-<div class="codehilite"><pre><span></span>For Windows: editor.bat
-For Linux: ./editor.sh
-</pre></div>
+<pre><code class="xml">   &lt;dependency&gt;
+     &lt;groupId&gt;org.wso2.siddhi&lt;/groupId&gt;
+     &lt;artifactId&gt;siddhi-core&lt;/artifactId&gt;
+     &lt;version&gt;4.x.x&lt;/version&gt;
+   &lt;/dependency&gt;
+   &lt;dependency&gt;
+     &lt;groupId&gt;org.wso2.siddhi&lt;/groupId&gt;
+     &lt;artifactId&gt;siddhi-query-api&lt;/artifactId&gt;
+     &lt;version&gt;4.x.x&lt;/version&gt;
+   &lt;/dependency&gt;
+   &lt;dependency&gt;
+     &lt;groupId&gt;org.wso2.siddhi&lt;/groupId&gt;
+     &lt;artifactId&gt;siddhi-query-compiler&lt;/artifactId&gt;
+     &lt;version&gt;4.x.x&lt;/version&gt;
+   &lt;/dependency&gt;
+</code></pre>
 
+<p>Add the following repository configuration to the same file.</p>
+<pre><code class="xml">   &lt;repositories&gt;
+     &lt;repository&gt;
+         &lt;id&gt;wso2.releases&lt;/id&gt;
+         &lt;name&gt;WSO2 internal Repository&lt;/name&gt;
+         &lt;url&gt;http://maven.wso2.org/nexus/content/repositories/releases/&lt;/url&gt;
+         &lt;releases&gt;
+             &lt;enabled&gt;true&lt;/enabled&gt;
+             &lt;updatePolicy&gt;daily&lt;/updatePolicy&gt;
+             &lt;checksumPolicy&gt;ignore&lt;/checksumPolicy&gt;
+         &lt;/releases&gt;
+     &lt;/repository&gt;
+   &lt;/repositories&gt;
+</code></pre>
 
-<p>For more details about WSO2 Stream Processor, see its <a href="https://docs.wso2.com/display/SP400/Quick+Start+Guide">Quick Start Guide</a>.</p>
-<p>After successfully starting the Stream Processor Studio, the terminal in Linux should look like as shown below:</p>
-<p><img alt="" src="../../images/quickstart/after-starting-sp.png?raw=true" title="Terminal after starting WSO2 Stream Processor Text Editor" /></p>
-<p>After starting the WSO2 Stream Processor, access the Stream Processor Studio by visiting the following link in your browser.</p>
-<div class="codehilite"><pre><span></span>http://localhost:9090/editor
-</pre></div>
-
-
-<p>This takes you to the Stream Processor Studio landing page.</p>
-<p><img alt="" src="../../images/quickstart/sp-studio.png?raw=true" title="Stream Processor Studio" /></p>
-<h2 id="4-siddhi-hello-world-your-first-siddhi-application">4. Siddhi ‘Hello World!’ — Your First Siddhi Application<a class="headerlink" href="#4-siddhi-hello-world-your-first-siddhi-application" title="Permanent link">&para;</a></h2>
-<p>Siddhi Streaming SQL is a rich, compact, easy-to-learn SQL-like language. <strong>Let's first learn how to find the total</strong> of values 
-coming into a data stream and output the current running total value with each event. Siddhi has lot of in-built functions and extensions 
-available for complex analysis, but to get started, let's use a simple one. You can find more information about the Siddhi grammar 
-and its functions in the <a href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/">Siddhi Query Guide</a>.</p>
-<p>Let's <strong>consider a scenario where we are loading cargo boxes into a ship</strong>. We need to keep track of the total 
-weight of the cargo added. <strong>Measuring the weight of a cargo box when loading is considered an event</strong>.</p>
-<p><img alt="" src="../../images/quickstart/loading-ship.jpeg?raw=true" title="Loading Cargo on Ship" /></p>
-<p>We can write a Siddhi program for the above scenario which has <strong>4 parts</strong>.</p>
-<p><strong>Part 1 — Giving our Siddhi application a suitable name.</strong> This is a Siddhi routine. In this example, let's name our application as 
-<em>“HelloWorldApp”</em></p>
-<div class="codehilite"><pre><span></span>@App:name(&quot;HelloWorldApp&quot;)
-</pre></div>
-
-
-<p><strong>Part 2 — Defining the input stream.</strong> The stream needs to have a name and a schema defining the data that each incoming event should contain.
-The event data attributes are expressed as name and type pairs. In this example:</p>
-<ul>
-<li>The name of the input stream — <em>“CargoStream”</em> <br>
-This contains only one data attribute:</li>
-<li>The name of the data in each event — <em>“weight”</em></li>
-<li>Type of the data <em>“weight”</em> — int</li>
-</ul>
-<div class="codehilite"><pre><span></span>define stream CargoStream (weight int);
-</pre></div>
-
-
-<p><strong>Part 3 - Defining the output stream.</strong> This has the same info as the previous definition with an additional 
-<em>totalWeight</em> attribute that contains the total weight calculated so far. Here, we need to add a 
-<em>"sink"</em>  to log the <code>OutputStream</code> so that we can observe the output values. (<strong>Sink is the Siddhi way to publish 
-streams to external systems.</strong> This particular <code>log</code> type sink just logs the stream events. To learn more about sinks, see 
-<a href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#sink">sink</a>)</p>
-<div class="codehilite"><pre><span></span>@sink(type=&#39;log&#39;, prefix=&#39;LOGGER&#39;)
-define stream OutputStream(weight int, totalWeight long);
-</pre></div>
-
-
-<p><strong>Part 4 — The actual Siddhi query.</strong> Here we need to specify the following:</p>
-<ol>
-<li>A name for the query — <em>“HelloWorldQuery”</em></li>
-<li>Which stream should be taken into processing — <em>“CargoStream”</em></li>
-<li>What data we require in the output stream — <em>“weight”</em>, <em>“totalWeight”</em></li>
-<li>How the output should be calculated - by calculating the <em>sum</em> of the the <em>weight</em>s  </li>
-<li>Which stream should be populated with the output — <em>“OutputStream”</em></li>
-</ol>
-<div class="codehilite"><pre><span></span>@info(name=&#39;HelloWorldQuery&#39;)
-from CargoStream
-select weight, sum(weight) as totalWeight
-insert into OutputStream;
-</pre></div>
-
-
-<p><img alt="" src="../../images/quickstart/hello-query.png?raw=true" title="Hello World in Stream Processor Studio" /></p>
-<h2 id="5-simulating-events">5. Simulating Events<a class="headerlink" href="#5-simulating-events" title="Permanent link">&para;</a></h2>
-<p>The Stream Processor Studio has in-built support to simulate events. You can do it via the <em>“Event Simulator”</em> 
-panel at the left of the Stream Processor Studio. You should save your <em>HelloWorldApp</em> by browsing to <strong>File</strong> -&gt; 
-<strong>Save</strong> before you run event simulation. Then click  <strong>Event Simulator</strong> and configure it as shown below.</p>
-<p><img alt="" src="../../images/quickstart/event-simulation.png?raw=true" title="Simulating Events in Stream Processor Studio" /></p>
-<p><strong>Step 1 — Configurations:</strong></p>
-<ul>
-<li>Siddhi App Name — <em>“HelloWorldApp”</em></li>
-<li>Stream Name — <em>“CargoStream”</em></li>
-<li>Timestamp — (Leave it blank)</li>
-<li>weight — 2 (or some integer)</li>
-</ul>
-<p><strong>Step 2 — Click “Run” mode and then click “Start”</strong>. This starts the Siddhi Application. 
-If the Siddhi application is successfully started, the following message is printed in the Stream Processor Studio console:</br>
-<em>“HelloWorldApp.siddhi Started Successfully!”</em> </p>
-<p><strong>Step 3 — Click “Send” and observe the terminal</strong> where you started WSO2 Stream Processor Studio. 
-You can see a log that contains <em>“outputData=[2, 2]”</em>. Click <strong>Send</strong> again and observe a log with 
-<em>“outputData=[2, 4]”</em>. You can change the value of the weight and send it to see how the sum of the weight is updated.</p>
-<p><img alt="" src="../../images/quickstart/log.png?raw=true" title="Terminal after sending 2 twice" /></p>
-<p>Bravo! You have successfully completed creating Siddhi Hello World! </p>
-<h2 id="6-a-bit-of-stream-processing-temporal-event-processing">6. A Bit of Stream Processing - <strong>temporal event processing</strong><a class="headerlink" href="#6-a-bit-of-stream-processing-temporal-event-processing" title="Permanent link">&para;</a></h2>
-<p>This section demonstrates how to carry out <strong>temporal window processing</strong> with Siddhi.</p>
-<p>Up to this point, we have been carrying out the processing by having only the running sum value in-memory. 
-No events were stored during this process. </p>
-<p><a href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#window">Window processing</a> 
-is a method that allows us to store some events in-memory for a given period so that we can perform operations 
-such as calculating the average, maximum, etc values within them.</p>
-<p>Let's imagine that when we are loading cargo boxes into the ship <strong>we need to keep track of the average weight of 
-the recently loaded boxes</strong> so that we can balance the weight across the ship. 
-For this purpose, let's try to find the <strong>average weight of last three boxes</strong> of each event.</p>
-<p><img alt="" src="../../images/quickstart/siddhi-windows.png?raw=true" title="Terminal after sending 2 twice" /></p>
-<p>For window processing, we need to modify our query as follows:</p>
-<div class="codehilite"><pre><span></span>@info(name=&#39;HelloWorldQuery&#39;) 
-from CargoStream#window.length(3)
-select weight, sum(weight) as totalWeight, avg(weight) as averageWeight
-insert into OutputStream;
-</pre></div>
-
+<p><strong>Note</strong>: You can create the Java project using any method you prefer. The required dependencies can be downloaded from <a href="http://maven.wso2.org/nexus/content/groups/wso2-public/org/wso2/siddhi/">here</a>.
+<em> Create a new Java class in the Maven project.
+</em> Define a stream definition as follows. The stream definition defines the format of the incoming events.</p>
+<pre><code class="java">  String definition = &quot;define stream cseEventStream (symbol string, price float, volume long);&quot;;
+</code></pre>
 
 <ul>
-<li><code>from CargoStream#window.length(3)</code> - Here, we are specifying that the last 3 events should be kept in memory for processing.</li>
-<li><code>avg(weight) as averageWeight</code> - Here, we are calculating the average of events stored in the window and producing the 
-average value as <em>"averageWeight"</em> (Note: Now the <code>sum</code> also calculates the <code>totalWeight</code> based on the last three events).</li>
+<li>Define a Siddhi query as follows.</li>
 </ul>
-<p>We also need to modify the <em>"OutputStream"</em> definition to accommodate the new <em>"averageWeight"</em>.</p>
-<div class="codehilite"><pre><span></span>define stream OutputStream(weight int, totalWeight long, averageWeight double);
-</pre></div>
+<pre><code class="java">  String query = &quot;@info(name = 'query1') &quot; +
+                 &quot;from cseEventStream#window.timeBatch(500)  &quot; +
+                 &quot;select symbol, sum(price) as price, sum(volume) as volume &quot; +
+                 &quot;group by symbol &quot; +
+                 &quot;insert into outputStream ;&quot;;
+</code></pre>
 
+<p>This Siddhi query stores incoming events for 500 milliseconds, groups them by symbol and calculates the sum for price and volume. Then it inserts the results into a stream named <code>outputStream</code>.</p>
+<h4 id="step-2-creating-siddhi-application-runtime">Step 2: Creating Siddhi Application Runtime</h4>
+<p>A Siddhi application is a self contained, valid set of stream definitions and queries. This step involves creating a runtime representation of a Siddhi application by combining the stream definition and the Siddhi query you created in Step 1.</p>
+<pre><code class="java">SiddhiManager siddhiManager = new SiddhiManager();
+SiddhiAppRuntime executionPlanRuntime = siddhiManager.createSiddhiAppRuntime(definition + query);
+</code></pre>
 
-<p>The updated Siddhi Application should look as shown below:</p>
-<p><img alt="" src="../../images/quickstart/window-processing-app.png?raw=true" title="Window Processing with Siddhi" /></p>
-<p>Now you can send events using the Event Simulator and observe the log to see the sum and average of the weights of the last three 
-cargo events.</p>
-<p>It is also notable that the defined <code>length window</code> only keeps 3 events in-memory. When the 4th event arrives, the 
-first event in the window is removed from memory. This ensures that the memory usage does not grow beyond a specific limit. There are also other 
-implementations done in Siddhi  to reduce the memory consumption. For more information, see <a href="https://wso2.github.io/siddhi/documentation/siddhi-architecture/">Siddhi Architecture</a>.  </p>
-<p>To learn more about the Siddhi functionality, see <a href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/">Siddhi Query Guide</a>.</p>
-<p>Feel free to try out Siddhi and event simulation to understand Siddhi better.</p>
-<p>If you have questions please post them to the <a target="_blank" href="http://stackoverflow.com/search?q=siddhi">Stackoverflow</a> with <a target="_blank" href="http://stackoverflow.com/search?q=siddhi">"Siddhi"</a> tag.</p>
+<p>In the above example, <code>definition + query</code> forms the Siddhi application.  The Siddhi Manager parses the Siddhi application and provides you with an Siddhi application runtime. This Siddhi application runtime is used to add callbacks and input handlers to the Siddhi application.</p>
+<h4 id="step-3-registering-a-callback">Step 3: Registering a Callback</h4>
+<p>You can register a callback to the Siddhi application runtime in order to receive the results once the events are processed. There are two types of callbacks:</p>
+<ul>
+<li><strong>Query callback</strong>: This subscribes to a query.</li>
+<li><strong>Stream callback</strong>: This subscribes to an event stream.
+In this example, a query callback is added because the Maven project has only one query.</li>
+</ul>
+<pre><code class="java">executionPlanRuntime.addCallback(&quot;query1&quot;, new QueryCallback() {
+     @Override
+     public void receive(long timeStamp, Event[] inEvents, Event[] removeEvents) {
+       EventPrinter.print(timeStamp, inEvents, removeEvents);
+     }
+});
+</code></pre>
+
+<p>Here, a new query callback is added to a query named <code>query1</code>. Once the results are generated, they are sent to the receive method of this callback. An event printer is added inside this callback to print the incoming events for demonstration purposes.</p>
+<h4 id="step-4-sending-events">Step 4: Sending Events</h4>
+<p>In order to send events from the event stream to the query, you need to obtain an input handler as follows:</p>
+<pre><code class="java">InputHandler inputHandler = executionPlanRuntime.getInputHandler(&quot;cseEventStream&quot;);
+</code></pre>
+
+<p>Use the following code to start the execution plan runtime and send events:</p>
+<pre><code class="java">executionPlanRuntime.start();
+
+inputHandler.send(new Object[]{&quot;ABC&quot;, 700f, 100l});
+inputHandler.send(new Object[]{&quot;WSO2&quot;, 60.5f, 200l});
+inputHandler.send(new Object[]{&quot;DEF&quot;, 700f, 100l});
+inputHandler.send(new Object[]{&quot;ABC&quot;, 700f, 100l});
+inputHandler.send(new Object[]{&quot;WSO2&quot;, 60.5f, 200l});
+inputHandler.send(new Object[]{&quot;DEF&quot;, 700f, 100l});
+inputHandler.send(new Object[]{&quot;ABC&quot;, 700f, 100l});
+inputHandler.send(new Object[]{&quot;WSO2&quot;, 60.5f, 200l});
+inputHandler.send(new Object[]{&quot;DEF&quot;, 700f, 100l});
+
+executionPlanRuntime.shutdown();
+</code></pre>
+
+<p>When the events are sent, they are printed by the event printer.</p>
+<p>For code examples, see <a href="https://github.com/wso2/siddhi/tree/master/modules/siddhi-samples/quick-start-samples">quick start samples for Siddhi</a>.</p>
                 
                   
                 
@@ -871,7 +858,7 @@ implementations done in Siddhi  to reduce the memory consumption. For more infor
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../features/" title="Features" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../.." title="Welcome to WSO2 Siddhi" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -880,19 +867,19 @@ implementations done in Siddhi  to reduce the memory consumption. For more infor
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Features
+                Welcome to WSO2 Siddhi
               </span>
             </div>
           </a>
         
         
-          <a href="../user-guide/" title="User Guide" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../siddhi-4.0/" title="Siddhi Query Guide" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                User Guide
+                Siddhi Query Guide
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -907,10 +894,6 @@ implementations done in Siddhi  to reduce the memory consumption. For more infor
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
-          <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2011 - 2017 WSO2
-          </div>
-        
         powered by
         <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
         and
@@ -919,16 +902,6 @@ implementations done in Siddhi  to reduce the memory consumption. For more infor
       </div>
       
         
-  <div class="md-footer-social">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-      <a href="https://github.com/wso2/siddhi" class="md-footer-social__link fa fa-github"></a>
-    
-      <a href="https://www.linkedin.com/groups/13553064" class="md-footer-social__link fa fa-linkedin"></a>
-    
-  </div>
-
       
     </div>
   </div>
@@ -936,9 +909,7 @@ implementations done in Siddhi  to reduce the memory consumption. For more infor
       
     </div>
     
-      <script src="../../assets/javascripts/application-f3ab9e5ff8.js"></script>
-      
-      
+      <script src="../../assets/javascripts/application-6b599127bc.js"></script>
       <script>app.initialize({url:{base:"../.."}})</script>
       
     
