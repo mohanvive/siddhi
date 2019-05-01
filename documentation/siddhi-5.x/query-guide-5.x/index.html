@@ -624,6 +624,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#purge-partition" title="Purge Partition" class="md-nav__link">
+    Purge Partition
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1488,6 +1495,13 @@
           <li class="md-nav__item">
   <a href="#inner-stream" title="Inner Stream" class="md-nav__link">
     Inner Stream
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#purge-partition" title="Purge Partition" class="md-nav__link">
+    Purge Partition
   </a>
   
 </li>
@@ -3830,7 +3844,7 @@ insert into SnapshotTempStream;    </pre></p>
 </li>
 </ul>
 <h2 id="partition">Partition<a class="headerlink" href="#partition" title="Permanent link">&para;</a></h2>
-<p>Partitions divide streams and queries into isolated groups in  order to process them in parallel and in isolation.
+<p>Partitions divide streams and queries into isolated groups in order to process them in parallel and in isolation.
 A partition can contain one or more queries and there can be multiple instances where the same queries and streams are replicated for each partition.
 Each partition is tagged with a partition key. Those partitions only process the events that match the corresponding partition key.</p>
 <p><strong>Purpose</strong></p>
@@ -3907,6 +3921,56 @@ begin
     insert into DeviceTempIncreasingStream
 end;
 </pre>
+
+<h3 id="purge-partition">Purge Partition<a class="headerlink" href="#purge-partition" title="Permanent link">&para;</a></h3>
+<p>Based on the partition key used for the partition, multiple instances of streams and queries will be generated. When an extremely large number of unique partition keys are used there is a possibility of very high instances of streams and queries getting generated and eventually system going out of memory. In order to overcome this, users can define a purge interval to clean partitions that will not be used anymore.</p>
+<p><strong>Purpose</strong></p>
+<p><code>@purge</code> allows you to clean the partition instances that will not be used anymore.</p>
+<p><strong>Syntax</strong></p>
+<p>The syntax of partition purge configuration is as follows:</p>
+<div class="codehilite"><pre><span></span><span class="o">@</span><span class="n">purge</span><span class="p">(</span><span class="n">enable</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="p">,</span> <span class="nb">interval</span><span class="o">=</span><span class="s1">&#39;&lt;purge interval&gt;&#39;</span><span class="p">,</span> <span class="n">idle</span><span class="p">.</span><span class="n">period</span><span class="o">=</span><span class="s1">&#39;&lt;idle period of partition instance&gt;&#39;</span><span class="p">)</span>
+<span class="n">partition</span> <span class="k">with</span> <span class="p">(</span> <span class="o">&lt;</span><span class="n">partition</span> <span class="k">key</span><span class="o">&gt;</span> <span class="k">of</span> <span class="o">&lt;</span><span class="k">input</span> <span class="n">stream</span><span class="o">&gt;</span> <span class="p">)</span>
+<span class="k">begin</span>
+    <span class="k">from</span> <span class="o">&lt;</span><span class="k">input</span> <span class="n">stream</span><span class="o">&gt;</span> <span class="p">...</span>
+    <span class="k">select</span> <span class="o">&lt;</span><span class="n">attribute</span> <span class="n">name</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">attribute</span> <span class="n">name</span><span class="o">&gt;</span><span class="p">,</span> <span class="p">...</span>
+    <span class="k">insert</span> <span class="k">into</span> <span class="o">&lt;</span><span class="k">output</span> <span class="n">stream</span><span class="o">&gt;</span>
+<span class="k">end</span><span class="p">;</span>
+</pre></div>
+
+
+<table>
+<thead>
+<tr>
+<th>Partition purge configuration</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Purge interval</td>
+<td>The periodic time interval to purge the purgeable partition instances.</td>
+</tr>
+<tr>
+<td>Idle period of partition instance</td>
+<td>The period, a particular partition instance (for a given partition key) needs to be idle before it becomes purgeable.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Examples</strong></p>
+<p>Mark partition instances eligible for purging, if there are no events from a particular deviceID for 15 seconds, and periodically purge those partition instances every 1 second.</p>
+<div class="codehilite"><pre><span></span><span class="o">@</span><span class="n">purge</span><span class="p">(</span><span class="n">enable</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="p">,</span> <span class="nb">interval</span><span class="o">=</span><span class="s1">&#39;1 sec&#39;</span><span class="p">,</span> <span class="n">idle</span><span class="p">.</span><span class="n">period</span><span class="o">=</span><span class="s1">&#39;15 sec&#39;</span><span class="p">)</span>
+<span class="n">partition</span> <span class="k">with</span> <span class="p">(</span> <span class="n">deviceID</span> <span class="k">of</span> <span class="n">TempStream</span> <span class="p">)</span>
+<span class="k">begin</span>
+    <span class="k">from</span> <span class="n">TempStream</span><span class="o">#</span><span class="n">window</span><span class="p">.</span><span class="n">lengthBatch</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+    <span class="k">select</span> <span class="n">roomNo</span><span class="p">,</span> <span class="n">deviceID</span><span class="p">,</span> <span class="k">avg</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span> <span class="k">as</span> <span class="n">avgTemp</span>
+    <span class="k">insert</span> <span class="k">into</span> <span class="o">#</span><span class="n">AvgTempStream</span>
+
+    <span class="k">from</span> <span class="k">every</span> <span class="p">(</span><span class="n">e1</span><span class="o">=#</span><span class="n">AvgTempStream</span><span class="p">),</span><span class="n">e2</span><span class="o">=#</span><span class="n">AvgTempStream</span><span class="p">[</span><span class="n">e1</span><span class="p">.</span><span class="n">avgTemp</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">&lt;</span> <span class="n">avgTemp</span><span class="p">]</span>
+    <span class="k">select</span> <span class="n">e1</span><span class="p">.</span><span class="n">deviceID</span><span class="p">,</span> <span class="n">e1</span><span class="p">.</span><span class="n">avgTemp</span> <span class="k">as</span> <span class="n">initialAvgTemp</span><span class="p">,</span> <span class="n">e2</span><span class="p">.</span><span class="n">avgTemp</span> <span class="k">as</span> <span class="n">finalAvgTemp</span>
+    <span class="k">insert</span> <span class="k">into</span> <span class="n">DeviceTempIncreasingStream</span>
+<span class="k">end</span><span class="p">;</span>
+</pre></div>
+
 
 <h2 id="table">Table<a class="headerlink" href="#table" title="Permanent link">&para;</a></h2>
 <p>A table is a stored version of an stream or a table of events. Its schema is defined via the <strong>table definition</strong> that is
