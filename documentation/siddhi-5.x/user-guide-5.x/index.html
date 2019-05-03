@@ -1212,7 +1212,7 @@
 <h3 id="using-siddhi-as-local-micro-service"><strong>Using Siddhi as Local Micro Service</strong><a class="headerlink" href="#using-siddhi-as-local-micro-service" title="Permanent link">&para;</a></h3>
 <p>Siddhi can also run a standalone program by passing the SiddhiApps and required configurations to it.</p>
 <ul>
-<li>Download the latest Siddhi distribution from <a href="https://github.com/siddhi-io/distribution/releases">Github releases</a>.</li>
+<li>Download the latest <a href="https://github.com/siddhi-io/distribution/releases/download/v0.1.0/siddhi-runner-0.1.0.zip">Siddhi Runner distribution</a> </li>
 <li>Unzip the siddhi-runner-x.x.x.zip</li>
 <li>Start SiddhiApps with the runner config by executing the following commands from the distribution directory<br/>
   Linux/Mac : <code>./bin/runner.sh -Dapps=&lt;siddhi-file&gt; -Dconfig=&lt;config-yaml-file&gt;</code><br/>
@@ -1226,6 +1226,10 @@
 <div class="admonition note">
 <p class="admonition-title">Always use <strong>absolute path</strong> for SiddhiApps and runner configs.</p>
 <p>Providing absolute path of SiddhiApp file, or directory in <code>-Dapps</code> parameter, and when providing the Siddhi runner config yaml on <code>-Dconfig</code> parameter while starting Siddhi runner.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Siddhi Tooling</p>
+<p>You can also use the powerful <a href="https://siddhi-io.github.io/siddhi/documentation/siddhi-5.x/quckstart-5.x/#3-using-siddhi-for-the-first-time">Siddhi Editor</a> to implement and test steam processing applications. </p>
 </div>
 <p><strong>Samples</strong></p>
 <h4 id="running-siddhi-app">Running Siddhi App<a class="headerlink" href="#running-siddhi-app" title="Permanent link">&para;</a></h4>
@@ -1474,6 +1478,10 @@ Thank you</pre>
 <p class="admonition-title">Always use <strong>absolute path</strong> for SiddhiApps and runner configs.</p>
 <p>Providing absolute path of SiddhiApp file, or directory in <code>-Dapps</code> parameter, and when providing the Siddhi runner config yaml on <code>-Dconfig</code> parameter while starting Siddhi runner.</p>
 </div>
+<div class="admonition tip">
+<p class="admonition-title">Siddhi Tooling</p>
+<p>You can also use the powerful <a href="https://siddhi-io.github.io/siddhi/documentation/siddhi-5.x/quckstart-5.x/#3-using-siddhi-for-the-first-time">Siddhi Editor</a> to implement and test steam processing applications. </p>
+</div>
 <p><strong>Samples</strong></p>
 <h4 id="running-siddhi-app_1">Running Siddhi App<a class="headerlink" href="#running-siddhi-app_1" title="Permanent link">&para;</a></h4>
 <p>Following SiddhiApp collects events via HTTP and logs the number of events arrived during last 15 seconds.  </p>
@@ -1691,7 +1699,7 @@ Thank you</pre>
 </ol>
 </li>
 <li>
-<p>Admin privileges to install Siddhi operator </p>
+<p>Admin privileges to install Siddhi operator  </p>
 </li>
 </ul>
 <div class="admonition note">
@@ -1731,6 +1739,10 @@ siddhi-parser     1         1         1            1           1m
 This can be created using a SiddhiProcess YAML file as given below.</p>
 <script src="https://gist.github.com/BuddhiWathsala/f029d671f4f6d7719dce59500b970815.js"></script>
 
+<div class="admonition tip">
+<p class="admonition-title">Siddhi Tooling</p>
+<p>You can also use the powerful <a href="https://siddhi-io.github.io/siddhi/documentation/siddhi-5.x/quckstart-5.x/#3-using-siddhi-for-the-first-time">Siddhi Editor</a> to implement and test steam processing applications. </p>
+</div>
 <p>To deploy the above Siddhi app in your Kubernetes cluster, copy to a YAML file with name <code>monitor-app.yaml</code> and execute the following command.</p>
 <div class="codehilite"><pre><span></span>kubectl create -f &lt;absolute-yaml-file-path&gt;/monitor-app.yaml
 </pre></div>
@@ -1983,6 +1995,10 @@ osgi&gt; [2019-04-20 03:59:00,208]  INFO {org.wso2.carbon.config.reader.ConfigFi
 <p>Here we will creating a very simple Siddhi application as follows, that consumes events via HTTP, filers the input events on type 'monitored' and logs the output on the console.</p>
 <script src="https://gist.github.com/BuddhiWathsala/8687a2b73bb003a8ae7bcf3d3f63b78e.js"></script>
 
+<div class="admonition tip">
+<p class="admonition-title">Siddhi Tooling</p>
+<p>You can also use the powerful <a href="https://siddhi-io.github.io/siddhi/documentation/siddhi-5.x/quckstart-5.x/#3-using-siddhi-for-the-first-time">Siddhi Editor</a> to implement and test steam processing applications. </p>
+</div>
 <p>Save the above Siddhi App file as <code>MonitorApp.siddhi</code>, and use this file to create a Kubernetes config map with the name <code>monitor-app-cm</code>.
 This can be achieved by running the following command. </p>
 <div class="codehilite"><pre><span></span>kubectl create configmap monitor-app-cm --from-file=&lt;absolute-file-path&gt;/MonitorApp.siddhi
