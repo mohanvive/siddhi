@@ -31,6 +31,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>http://siddhi.io/documentation/siddhi-5.x/config-guide-5.x/</loc>
+     <lastmod>2019-05-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>http://siddhi.io/documentation/siddhi-5.x/query-guide-5.x/</loc>
      <lastmod>2019-05-10</lastmod>
      <changefreq>daily</changefreq>
